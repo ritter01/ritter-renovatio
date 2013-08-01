@@ -1,5 +1,10 @@
-Projeto será sobre o cadastro de vestidos de noivas para aluguél.
+Projeto sera sobre controle de alunos e treinos de uma academia.
 
 Equipe:
 
 Mauro Ritter
+
+
+Sistemas Similares:
+
+Sistema SCA
