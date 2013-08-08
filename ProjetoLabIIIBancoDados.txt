@@ -1,0 +1,36 @@
+ProjetoLabIII - Banco de Dados
+
+
+-- Database: "ProjetoLabIII"
+
+-- DROP DATABASE "ProjetoLabIII";
+
+CREATE DATABASE "ProjetoLabIII"
+  WITH OWNER = postgres
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'Portuguese_Brazil.1252'
+       LC_CTYPE = 'Portuguese_Brazil.1252'
+       CONNECTION LIMIT = -1;
+
+create table Alunos
+(
+NOME varchar(60),
+IDADE NUMERIC NOT NULL,
+Endereço varchar(20));
+
+
+create table Treinos
+(
+Exercícios varchar(60),
+Séries numeric,
+Repetições numeric);
+
+insert into Alunos
+VALUES ('Roberto',26,'RuaFeliciano1269');
+insert into Alunos
+VALUES ('Paula',20,'AvenidaGregoriano853AP02');
+insert into Alunos
+VALUES ('Jorge',36,'RuaCarlosAlmeida963');
+insert into Alunos
+VALUES ('Julia',19,'AvenidaSarmen153');
