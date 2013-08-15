@@ -3,9 +3,8 @@ public class jdbcteste {
 
 	/**
 	 * @param args
-	 * @throws SQLException 
 	 */
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		String url = "jdbc:postgresql://localhost:5432/projetolab";
