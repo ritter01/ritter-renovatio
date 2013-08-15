@@ -4,7 +4,7 @@
 
 -- Dumped from database version 9.2.2
 -- Dumped by pg_dump version 9.2.2
--- Started on 2013-08-15 10:44:23
+-- Started on 2013-08-15 11:35:35
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -13,16 +13,16 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- TOC entry 1926 (class 1262 OID 49874)
--- Name: ProjetoLabIII; Type: DATABASE; Schema: -; Owner: postgres
+-- TOC entry 1926 (class 1262 OID 49925)
+-- Name: projetolab; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE "ProjetoLabIII" WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'Portuguese_Brazil.1252' LC_CTYPE = 'Portuguese_Brazil.1252';
+CREATE DATABASE projetolab WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'Portuguese_Brazil.1252' LC_CTYPE = 'Portuguese_Brazil.1252';
 
 
-ALTER DATABASE "ProjetoLabIII" OWNER TO postgres;
+ALTER DATABASE projetolab OWNER TO postgres;
 
-\connect "ProjetoLabIII"
+\connect projetolab
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -54,7 +54,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 169 (class 1259 OID 49905)
+-- TOC entry 168 (class 1259 OID 49926)
 -- Name: alunos; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -68,7 +68,7 @@ CREATE TABLE alunos (
 ALTER TABLE public.alunos OWNER TO postgres;
 
 --
--- TOC entry 168 (class 1259 OID 49899)
+-- TOC entry 169 (class 1259 OID 49932)
 -- Name: treinos; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -82,8 +82,8 @@ CREATE TABLE treinos (
 ALTER TABLE public.treinos OWNER TO postgres;
 
 --
--- TOC entry 1921 (class 0 OID 49905)
--- Dependencies: 169
+-- TOC entry 1920 (class 0 OID 49926)
+-- Dependencies: 168
 -- Data for Name: alunos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -94,8 +94,8 @@ INSERT INTO alunos VALUES ('Julia', 19, 'AvenidaSarmen153');
 
 
 --
--- TOC entry 1920 (class 0 OID 49899)
--- Dependencies: 168
+-- TOC entry 1921 (class 0 OID 49932)
+-- Dependencies: 169
 -- Data for Name: treinos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -113,7 +113,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2013-08-15 10:44:23
+-- Completed on 2013-08-15 11:35:35
 
 --
 -- PostgreSQL database dump complete
