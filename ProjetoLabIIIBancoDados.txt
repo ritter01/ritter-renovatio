@@ -17,14 +17,14 @@ create table Alunos
 (
 NOME varchar(60),
 IDADE NUMERIC NOT NULL,
-Endereço varchar(20));
+Endereco varchar(40));
 
 
 create table Treinos
 (
-Exercícios varchar(60),
-Séries numeric,
-Repetições numeric);
+Exercicios varchar(60),
+Series numeric,
+Repeticoes numeric);
 
 insert into Alunos
 VALUES ('Roberto',26,'RuaFeliciano1269');

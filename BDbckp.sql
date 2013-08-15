@@ -4,7 +4,7 @@
 
 -- Dumped from database version 9.2.2
 -- Dumped by pg_dump version 9.2.2
--- Started on 2013-08-15 10:36:41
+-- Started on 2013-08-15 10:44:23
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -54,35 +54,35 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 169 (class 1259 OID 49887)
+-- TOC entry 169 (class 1259 OID 49905)
 -- Name: alunos; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
 CREATE TABLE alunos (
     nome character varying(60),
     idade numeric NOT NULL,
-    "endereã§o" character varying(60)
+    endereco character varying(40)
 );
 
 
 ALTER TABLE public.alunos OWNER TO postgres;
 
 --
--- TOC entry 168 (class 1259 OID 49881)
+-- TOC entry 168 (class 1259 OID 49899)
 -- Name: treinos; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
 CREATE TABLE treinos (
-    "exercã­cios" character varying(60),
-    "sã©ries" numeric,
-    "repetiã§ãµes" numeric
+    exercicios character varying(60),
+    series numeric,
+    repeticoes numeric
 );
 
 
 ALTER TABLE public.treinos OWNER TO postgres;
 
 --
--- TOC entry 1921 (class 0 OID 49887)
+-- TOC entry 1921 (class 0 OID 49905)
 -- Dependencies: 169
 -- Data for Name: alunos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -94,7 +94,7 @@ INSERT INTO alunos VALUES ('Julia', 19, 'AvenidaSarmen153');
 
 
 --
--- TOC entry 1920 (class 0 OID 49881)
+-- TOC entry 1920 (class 0 OID 49899)
 -- Dependencies: 168
 -- Data for Name: treinos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -113,7 +113,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2013-08-15 10:36:42
+-- Completed on 2013-08-15 10:44:23
 
 --
 -- PostgreSQL database dump complete
