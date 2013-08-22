@@ -21,17 +21,8 @@ public class jdbcteste {
 		Connection db = DriverManager.getConnection(url, props);
 		System.out.println("Conectado!");
 		
-		//consulta toda a tabela
-		//String cmd = "select * from alunos";
-		//PreparedStatement st = db.prepareStatement(cmd);
-		
-		
-		//consulta um determinado elemento
-		String nome = "Julia";
-		String cmd = "select * from alunos where nome = ?";
+		String cmd = "select * from alunos";
 		PreparedStatement st = db.prepareStatement(cmd);
-		st.setString(1, nome); //parametros do elemento
-		
 		ResultSet rs = st.executeQuery();
 		
 		while (rs.next()) {
