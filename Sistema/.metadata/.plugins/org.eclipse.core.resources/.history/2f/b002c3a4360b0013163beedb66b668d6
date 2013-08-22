@@ -1,0 +1,11 @@
+package projetolab.pojo;
+
+public class Aluno {
+	
+	
+
+String nome;
+int idade;
+String endereco;
+
+}
