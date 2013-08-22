@@ -1,0 +1,24 @@
+import java.sql.*;
+import java.util.Properties;
+public class jdbcteste {
+
+	/**
+	 * @param args
+	 * @throws SQLException 
+	 */
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+		
+		String url = "jdbc:postgresql://localhost:5432/projetolab";
+		String username = "postgres";
+		String password= "senacrs";
+		
+		Properties props = new Properties();
+		props.setProperty("user","fred");
+		props.setProperty("password","secret");
+		
+		Connection db = DriverManager.getConnection(url, username, password);
+
+	}
+
+}

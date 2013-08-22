@@ -8,10 +8,8 @@ public class jdbcteste {
 	/**
 	 * @param args
 	 * @throws SQLException 
-	 * @throws IOException 
-	 * @throws FileNotFoundException 
 	 */
-	public static void main(String[] args) throws SQLException, FileNotFoundException, IOException {
+	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub
 		
 		Properties props = new Properties();
