@@ -26,7 +26,7 @@ public class jdbcteste {
 		String nome = "Julia";
 		String cmd = "select * from alunos where nome = ?";
 		PreparedStatement st = db.prepareStatement(cmd);
-		st.setString(1, nome);
+		st.setString(1, nome); // parametros do elemento
 
 		ResultSet rs = st.executeQuery();
 
