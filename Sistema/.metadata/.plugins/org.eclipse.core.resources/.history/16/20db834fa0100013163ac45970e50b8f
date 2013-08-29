@@ -1,0 +1,18 @@
+package projetolab.pojo;
+
+public class Treino {
+	
+	private String exercicio;
+	private int serie;
+	private int repeticao;
+	
+	public Treino(String exercicio, int serie, int repeticao) {
+		super();
+		this.exercicio = exercicio;
+		this.serie = serie;
+		this.repeticao = repeticao;
+	}
+	
+	
+
+}

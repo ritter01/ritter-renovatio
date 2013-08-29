@@ -1,0 +1,11 @@
+package projetolab.pojo;
+
+public class Treino {
+	
+	private String exercicio;
+	private int serie;
+	private int repeticao;
+	
+	
+
+}
