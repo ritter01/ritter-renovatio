@@ -31,7 +31,7 @@ public class projetolabdao {
 		db = DriverManager.getConnection(url, props);
 
 		st = db.prepareStatement(cmd);
-		st.setString(1, name);
+		st.setString(1, nome);
 		rs = st.executeQuery();
 		
 		
