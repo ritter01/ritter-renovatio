@@ -1,4 +1,0 @@
-url = jdbc:postgresql://localhost:5432/projetolab
-1 user = postgres
-2 password = senacrs
-
