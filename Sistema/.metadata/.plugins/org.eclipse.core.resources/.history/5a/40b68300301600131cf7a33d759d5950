@@ -1,0 +1,23 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+public class CarregaPanel extendes JPanel {
+	
+	 JLabel label = new JLabel("Hello World");
+     frame.getContentPane().setLayout(new FlowLayout());
+     
+     frame.getContentPane().add(label);
+     
+     JTextField textfield = new JTextField("Escreva seu nome:");
+     frame.getContentPane().add(textfield);
+     
+     JButton button = new JButton("Click aqui!");
+     frame.getContentPane().add(button);
+
+}
+
+}
