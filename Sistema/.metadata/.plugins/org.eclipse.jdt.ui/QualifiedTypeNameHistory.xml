@@ -2,4 +2,7 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="java.awt.FlowLayout"/>
 </qualifiedTypeNameHistroy>
