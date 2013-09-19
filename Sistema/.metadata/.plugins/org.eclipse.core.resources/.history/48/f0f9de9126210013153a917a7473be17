@@ -1,0 +1,5 @@
+package frangofitness.gui.action;
+
+public class CadastrarAlunoAction {
+
+}

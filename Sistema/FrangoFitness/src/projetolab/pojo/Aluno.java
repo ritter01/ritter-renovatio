@@ -1,14 +1,16 @@
 package projetolab.pojo;
 
+import projetolab.pojo.Aluno;
+
 public class Aluno {
 	
 	
 
 private String nome;
-private int idade;
+private String idade;
 private String endereco;
 
-public Aluno(String nome, int idade, String endereco) {
+public Aluno(String nome, String idade, String endereco) {
 	super();
 	this.nome = nome;
 	this.idade = idade;
@@ -19,7 +21,7 @@ public String getNome() {
 	return nome;
 }
 
-public int getIdade() {
+public String getIdade() {
 	return idade;
 }
 
