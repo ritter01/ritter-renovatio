@@ -68,7 +68,7 @@ public class projetolabdao {
 	}
 	
 	public void insertAluno(Aluno aluno) {
-		String cmd = "insert into Alunos(nome, idade, endereco) values (?, ?, ?)";
+		String cmd = "insert into projetolab.alunos(nome, idade, endereco) values (?, ?, ?)";
 
 		Connection db = null;
 		PreparedStatement st = null;

@@ -105,9 +105,9 @@ public class JTestGUI {
 		}
 		public void actionPerformed(ActionEvent e) {
 			
-			int n1 = Integer.parseInt(p1.getText());
-			int n2 = Integer.parseInt(p2.getText());
-			int resultado = n1+n2;
+			int p1 = Integer.parseInt(P1.getText());
+			int p2 = Integer.parseInt(P2.getText());
+			int resultado = p1+p2;
 			p3.setText(String.format("%d", resultado));
 		}
 	}
