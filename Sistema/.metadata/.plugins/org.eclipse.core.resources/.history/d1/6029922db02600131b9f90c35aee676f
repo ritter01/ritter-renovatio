@@ -27,8 +27,8 @@ public class SobreAction extends AbstractAction {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		System.out.println("Sobre");
-		JOptionPane.showMessageDialog(frame, "v 2.0 - Frango Fitness.",
-				"Sobre Frango Fitness - Alunos", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "v. 0.2 (c) LAPRO III, FSPOA.",
+				"Sobre o Banco Pindorama - Caixa Eletrônico", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 }
