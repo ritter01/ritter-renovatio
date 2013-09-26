@@ -36,9 +36,6 @@ public class FitnessSwing {
 			// Create and set up the window.
 			JFrame frame = new JFrame("Frango Fitness - Tela Aluno");
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			frame.setIconImage(new ImageIcon(("img.png")).getImage());  
-			
-			
 
 			JMenuBar mb = new JMenuBar();
 			frame.setJMenuBar(mb);
@@ -65,12 +62,18 @@ public class FitnessSwing {
 
 			frame.getContentPane().add(panel);
 			
+			ImageIcon imagemTituloJanela = new ImageIcon("img.png");  
+			setIconImage(imagemTituloJanela.getImage());
+
 			frame.setPreferredSize(new Dimension(800,200));
 			frame.pack();
 			frame.setVisible(true);
 		}
 
-		
+		private static void setIconImage(Image image) {
+			// TODO Auto-generated method stub
+			
+		}
 
 		public static void main(String[] args) {
 			// Schedule a job for the event-dispatching thread:

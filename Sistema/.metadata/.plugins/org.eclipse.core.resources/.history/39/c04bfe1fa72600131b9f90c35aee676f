@@ -36,7 +36,7 @@ public class FitnessSwing {
 			// Create and set up the window.
 			JFrame frame = new JFrame("Frango Fitness - Tela Aluno");
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			frame.setIconImage(new ImageIcon(("img.png")).getImage());  
+			frame.setIconImage(new ImageIcon(("img.gif")).getImage());  
 			
 			
 
