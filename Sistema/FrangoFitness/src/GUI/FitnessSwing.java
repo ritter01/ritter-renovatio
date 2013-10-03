@@ -1,5 +1,6 @@
 package GUI;
 
+import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -15,6 +16,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 
+import frangofitness.gui.action.CadastrarAction;
 import frangofitness.gui.action.CadastrarAlunoAction;
 import frangofitness.gui.action.SairAction;
 import frangofitness.gui.action.SobreAction;
@@ -39,6 +41,7 @@ public class FitnessSwing {
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.setIconImage(new ImageIcon(("img.png")).getImage());
 			
+			CardLayout card = new CardLayout(0,0);
 			
 
 			JMenuBar mb = new JMenuBar();
@@ -58,13 +61,22 @@ public class FitnessSwing {
 			sair.setAccelerator(KeyStroke.getKeyStroke(
 			        KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
 			
+			JMenuItem cadastrar = new JMenuItem(new CadastrarAction(frame, card));
+			arquivo.add(cadastrar);
+			cadastrar.setMnemonic(KeyEvent.VK_C);
+			cadastrar.setAccelerator(KeyStroke.getKeyStroke(
+			        KeyEvent.VK_S, ActionEvent.CTRL_MASK));
+			
 			JMenuItem sobre = new JMenuItem(new SobreAction(frame));
 			ajuda.add(sobre);
 			sobre.setMnemonic(KeyEvent.VK_S);
 
 			JPanel panel = new CadastrarAlunoPanel();
-
-			frame.getContentPane().add(panel);
+			JPanel vazio = new JPanel();
+			
+			frame.setLayout(card);
+			frame.getContentPane().add(vazio, "vazio");
+			frame.getContentPane().add(panelCadastrarAlunoPanel, "Cadastrar Aluno");
 			
 			frame.setPreferredSize(new Dimension(800,200));
 			frame.pack();

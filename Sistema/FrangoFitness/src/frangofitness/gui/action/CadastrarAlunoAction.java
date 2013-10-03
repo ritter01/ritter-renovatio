@@ -37,6 +37,19 @@ public class CadastrarAlunoAction extends AbstractAction {
 
 
 
+	/*/public CadastrarAlunoAction() {
+		// deletar se no cadastro o botão cadastrar não funcionar
+	}
+*/
+
+	public CadastrarAlunoAction(JFrame frame) {
+		// deletar se no cadastro o botão cadastrar não funcionar
+		super("Cadastrar");
+		this.panel = panel;
+	}
+
+
+
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		Aluno a = panel.getAluno();

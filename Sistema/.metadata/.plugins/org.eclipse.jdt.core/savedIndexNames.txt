@@ -8,7 +8,6 @@ INDEX VERSION 1.126+C:\Users\631220118\Documents\GitHub\ritter-renovatio\Sistema
 4173023868.index
 1818563445.index
 2416215182.index
-979929789.index
 3133528496.index
 3974580528.index
 3847288100.index
