@@ -15,7 +15,6 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 
-import frangofitness.gui.action.CadastrarAlunoAction;
 import frangofitness.gui.action.SairAction;
 import frangofitness.gui.action.SobreAction;
 
@@ -37,8 +36,7 @@ public class FitnessSwing {
 			// Create and set up the window.
 			JFrame frame = new JFrame("Frango Fitness - Tela Aluno");
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			frame.setIconImage(new ImageIcon(("img.png")).getImage());
-			
+			frame.setIconImage(new ImageIcon(("img.png")).getImage());  			
 			
 
 			JMenuBar mb = new JMenuBar();
@@ -57,7 +55,7 @@ public class FitnessSwing {
 			sair.setMnemonic(KeyEvent.VK_S);
 			sair.setAccelerator(KeyStroke.getKeyStroke(
 			        KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
-			
+
 			JMenuItem sobre = new JMenuItem(new SobreAction(frame));
 			ajuda.add(sobre);
 			sobre.setMnemonic(KeyEvent.VK_S);

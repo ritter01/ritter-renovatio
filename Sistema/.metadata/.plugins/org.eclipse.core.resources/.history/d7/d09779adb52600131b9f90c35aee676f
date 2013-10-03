@@ -35,7 +35,13 @@ public class CadastrarAlunoAction extends AbstractAction {
 		this.panel = panel;
 	}
 
+	public CadastrarAlunoAction(JFrame frame) {
+		// Desfazer caso tenha erro na classe FitnessSwing
+	}
 
+	public CadastrarAlunoAction() {
+		// Desfazer caso tenha erro na classe FitnessSwing
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
