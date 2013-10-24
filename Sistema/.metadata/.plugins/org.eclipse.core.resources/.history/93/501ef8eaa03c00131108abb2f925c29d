@@ -1,0 +1,19 @@
+package GUI;
+
+import javax.swing.JPanel;
+import javax.swing.JTable;
+
+import pindorama.gui.MyTableModel;
+import pindorama.pojo.Conta;
+
+public class CadastroAlunoPanel extends JPanel {
+	
+	private JTable table;
+	
+public JCadastroContaPanel() {
+		
+		//FIXME: teste com conta 1
+		table = new JTable(new MyTableModel(new Conta(1,"", "", "")));
+		add(table);
+
+}

@@ -71,12 +71,12 @@ public class FitnessSwing {
 			ajuda.add(sobre);
 			sobre.setMnemonic(KeyEvent.VK_S);
 
-			JPanel panel = new CadastrarAlunoPanel();
+			JPanel panelCadastrarAluno = new CadastrarAlunoPanel(frame, card);
 			JPanel vazio = new JPanel();
 			
 			frame.setLayout(card);
 			frame.getContentPane().add(vazio, "vazio");
-			frame.getContentPane().add(panelCadastrarAlunoPanel, "Cadastrar Aluno");
+			frame.getContentPane().add(panelCadastrarAluno, "Tela Cadastrar Aluno");
 			
 			frame.setPreferredSize(new Dimension(800,200));
 			frame.pack();

@@ -1,12 +1,16 @@
 package projetodao;
 
 import projetolab.pojo.Aluno;
+import projetolab.pojo.Treino;
+
 
 import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import projetolab.pojo.Aluno;
@@ -106,5 +110,55 @@ public class projetolabdao {
 			}
 		}
 	}
+	
+	public List<Treino> findTreinoByAluno(Aluno a) {
+		String cmd = "select * from treino where aluno= ?";
+		List<Treino> mvs = new ArrayList<Treino>();
+
+		Connection db = null;
+		PreparedStatement st = null;
+		ResultSet rs = null;
+
+		try {
+			Properties props = new Properties();
+			props.load(new FileInputStream("Banco.properties"));
+			String url = props.getProperty("url");
+
+			db = DriverManager.getConnection(url, props);
+
+			st = db.prepareStatement(cmd);
+			st.setInt(1, a.getAlunoId());
+			rs = st.executeQuery();
+
+			while (rs.next()) {
+				int TreinoId = rs.getInt(1);
+				int alunoIdBD = rs.getInt(3);
+				
+				
+				String descricao = rs.getString(5);
+				tr.add(new Treino(TreinoId,
+						AlunoIdBD, descricao));
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (db != null) {
+					db.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return tr;
+	}
+
 }
 
