@@ -55,12 +55,6 @@ public class FitnessSwing {
 			ajuda.setMnemonic(KeyEvent.VK_U);
 			mb.add(ajuda);
 
-			JMenuItem sair = new JMenuItem(new SairAction());
-			arquivo.add(sair);
-			sair.setMnemonic(KeyEvent.VK_S);
-			sair.setAccelerator(KeyStroke.getKeyStroke(
-			        KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
-			
 			JMenuItem cadastrar = new JMenuItem(new CadastrarAction(frame, card));
 			arquivo.add(cadastrar);
 			cadastrar.setMnemonic(KeyEvent.VK_C);
@@ -70,6 +64,12 @@ public class FitnessSwing {
 			JMenuItem sobre = new JMenuItem(new SobreAction(frame));
 			ajuda.add(sobre);
 			sobre.setMnemonic(KeyEvent.VK_S);
+			
+			JMenuItem sair = new JMenuItem(new SairAction());
+			arquivo.add(sair);
+			sair.setMnemonic(KeyEvent.VK_S);
+			sair.setAccelerator(KeyStroke.getKeyStroke(
+			        KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
 
 			JPanel panelCadastrarAluno = new CadastrarAlunoPanel(frame, card);
 			JPanel vazio = new JPanel();

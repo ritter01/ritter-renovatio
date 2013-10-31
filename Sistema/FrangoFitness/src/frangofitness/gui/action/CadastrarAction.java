@@ -26,6 +26,9 @@ public class CadastrarAction extends AbstractAction {
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
+		System.out.println("Oi");
+		card.show(frame.getContentPane(), "Tela Cadastrar Aluno" );
+		
 	}
 	
 	

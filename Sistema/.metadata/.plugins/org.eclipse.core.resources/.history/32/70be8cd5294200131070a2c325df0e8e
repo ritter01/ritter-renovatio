@@ -1,0 +1,165 @@
+package projetodao;
+
+import projetolab.pojo.Aluno;
+import projetolab.pojo.Treino;
+
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
+
+import projetolab.pojo.Aluno;
+
+public class projetolabdao {
+
+	public Aluno findAlunoByName(String name) {
+
+		Aluno aluno = null;
+
+		String cmd = "select * from alunos where nome= ?";
+
+		Connection db = null;
+		PreparedStatement st = null;
+		ResultSet rs = null;
+
+		try {
+
+			Properties props = new Properties();
+			props.load(new FileInputStream("Banco.properties"));
+			String url = props.getProperty("url");
+
+			db = DriverManager.getConnection(url, props);
+
+			st = db.prepareStatement(cmd);
+			st.setString(1, name);
+			rs = st.executeQuery();
+
+			while (rs.next())  {
+				// copiar dados para POJO
+				
+				String nome = rs.getString(1);
+				String idade = rs.getString(2);
+				String endereco = rs.getString(3);
+				aluno = new Aluno(nome, idade, endereco);
+			}
+			rs.close();
+			st.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+
+					st.close();
+				}
+				if (db != null) {
+
+					db.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return aluno;
+	}
+	
+	public void insertAluno(Aluno aluno) {
+		String cmd = "insert into Alunos(nome, idade, endereco) values (?, ?, ?)";
+
+		Connection db = null;
+		PreparedStatement st = null;
+
+		try {
+			// abrir conexão
+			Properties props = new Properties();
+			props.load(new FileInputStream("Banco.properties"));
+			String url = props.getProperty("url");
+
+			db = DriverManager.getConnection(url, props);
+
+			st = db.prepareStatement(cmd);
+			st.setString(2, aluno.getNome());
+			st.setInt(3, aluno.getIdade());
+			st.setString(4, aluno.getEndereco());
+			int r = st.executeUpdate();
+
+			if (r != 1) {
+				throw new RuntimeException("Erro ao inserir aluno!");
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (st != null) {
+					st.close();
+				}
+				if (db != null) {
+					db.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+	
+	public List<Treino> findTreinoByAluno(Aluno a) {
+		String cmd = "select * from treino where aluno= ?";
+		List<Treino> tr = new ArrayList<Treino>();
+
+		Connection db = null;
+		PreparedStatement st = null;
+		ResultSet rs = null;
+
+		try {
+			Properties props = new Properties();
+			props.load(new FileInputStream("Banco.properties"));
+			String url = props.getProperty("url");
+
+			db = DriverManager.getConnection(url, props);
+
+			st = db.prepareStatement(cmd);
+			st.setInt(1, a.getalunoID());
+			rs = st.executeQuery();
+
+			while (rs.next()) {
+				int treinoID = rs.getInt(1);
+				int alunoIdBD = rs.getInt(3);
+			}}
+				
+				
+			/*	String descricao = rs.getString(5);
+				tr.add(new Treino(treinoID,
+						alunoIdBD));
+			}
+
+		}*/ catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (db != null) {
+					db.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return tr;
+	}
+
+}
+
