@@ -23,6 +23,17 @@ public class CadastrarAlunoPanel extends JPanel {
 	/**
 	 * 
 	 */
+
+	
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	public CardLayout getCard() {
+		return card;
+	}
+	
+
 	private static final long serialVersionUID = 1L;
 
 	private JTextField nome;

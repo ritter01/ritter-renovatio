@@ -12,7 +12,7 @@ public class CadastroAlunoPanel extends JPanel {
 	
 public CadastroAlunoPanel() {
 		
-		//FIXME: teste com conta 1
+		
 		table = new JTable(new MyTabelModel(new Aluno("","", "")));
 		add(table);
 
